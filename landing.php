@@ -48,222 +48,239 @@
   <body>
     <div id="root"></div>
 
-    <script type="text/javascript">
-      const e = React.createElement;
+ <script type="text/javascript">
+  const e = React.createElement;
 
-      function Hero() {
-        return e(
-          "section",
-          { className: "max-w-3xl text-center relative px-4" },
+  function Hero() {
+    return e(
+      "section",
+      { className: "max-w-3xl text-center relative px-4" },
+      [
+        // Glow de fondo
+        e("div", {
+          key: "glow",
+          className:
+            "pointer-events-none absolute -inset-32 bg-[radial-gradient(circle_at_top,_rgba(4,217,255,0.18),_transparent_60%)]",
+        }),
+        e(
+          "div",
+          { key: "content", className: "relative space-y-6" },
           [
-            // Glow de fondo
-            e("div", {
-              key: "glow",
-              className:
-                "pointer-events-none absolute -inset-32 bg-[radial-gradient(circle_at_top,_rgba(4,217,255,0.18),_transparent_60%)]",
-            }),
+            // LOGO ENCIMA DE "Frontend · React"
             e(
               "div",
-              { key: "content", className: "relative space-y-6" },
+              {
+                key: "logo-wrapper",
+                className: "flex justify-center",
+              },
+              e("img", {
+                src: "/proyectos/dashjc/assets/images/dashboard/logoJCDBLUE.png",
+                alt: "Logo JC Duro",
+                className:
+                  "h-16 w-auto mb-2 drop-shadow-[0_0_18px_#04D9FF]",
+              })
+            ),
+
+            e(
+              "p",
+              {
+                key: "kicker",
+                className:
+                  "text-sm tracking-[0.3em] uppercase text-neon",
+              },
+              "Frontend · React"
+            ),
+
+            e(
+              "h1",
+              {
+                key: "title",
+                className:
+                  "text-4xl md:text-5xl font-bold leading-tight",
+              },
+              [
+                "Interfaz rápida con ",
+                e(
+                  "span",
+                  {
+                    key: "span",
+                    className:
+                      "text-neon drop-shadow-[0_0_25px_#04D9FF]",
+                  },
+                  "estilo neon"
+                ),
+              ]
+            ),
+
+            e(
+              "p",
+              {
+                key: "desc",
+                className: "text-slate-400 max-w-xl mx-auto",
+              },
+              "Landing minimalista en React con acentos neon azul, perfecta como tarjeta de presentación o portfolio rápido."
+            ),
+
+            e(
+              "div",
+              {
+                key: "buttons",
+                className: "flex flex-wrap gap-4 justify-center",
+              },
+              [
+                // BOTÓN "Ver proyectos" con link
+                e(
+                  "a",
+                  {
+                    key: "link-projects",
+                    href: "https://jcduro.bexartideas.com/templates/jcduro.php#projects",
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                  },
+                  e(
+                    "button",
+                    {
+                      className:
+                        "px-6 py-3 rounded-full bg-neon text-darkbg font-semibold shadow-[0_0_25px_#04D9FF] hover:shadow-[0_0_40px_#04D9FF] hover:-translate-y-0.5 transition",
+                    },
+                    "Ver proyectos"
+                  )
+                ),
+                // BOTÓN "Contacto" con link
+                e(
+                  "a",
+                  {
+                    key: "link-contact",
+                    href: "https://jcduro.bexartideas.com/templates/jcduro.php#contact",
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                  },
+                  e(
+                    "button",
+                    {
+                      className:
+                        "px-6 py-3 rounded-full border border-neon text-neon hover:bg-neon/10 transition",
+                    },
+                    "Contacto"
+                  )
+                ),
+              ]
+            ),
+
+            e(
+              "div",
+              {
+                key: "stats",
+                className:
+                  "mt-8 grid grid-cols-3 gap-4 text-xs md:text-sm text-slate-400",
+              },
               [
                 e(
-                  "p",
-                  {
-                    key: "kicker",
-                    className:
-                      "text-sm tracking-[0.3em] uppercase text-neon",
-                  },
-                  "Frontend · React"
-                ),
-                e(
-                  "h1",
-                  {
-                    key: "title",
-                    className:
-                      "text-4xl md:text-5xl font-bold leading-tight",
-                  },
-                  [
-                    "Interfaces rápidas con ",
-                    e(
-                      "span",
-                      {
-                        key: "span",
-                        className:
-                          "text-neon drop-shadow-[0_0_25px_#04D9FF]",
-                      },
-                      "estilo neon"
-                    ),
-                  ]
-                ),
-                e(
-                  "p",
-                  {
-                    key: "desc",
-                    className: "text-slate-400 max-w-xl mx-auto",
-                  },
-                  "Landing minimalista en React con acentos neon azul, perfecta como tarjeta de presentación o portfolio rápido."
-                ),
-                e(
                   "div",
                   {
-                    key: "buttons",
+                    key: "stat1",
                     className:
-                      "flex flex-wrap gap-4 justify-center",
+                      "border border-slate-800/80 rounded-xl bg-slate-900/30 backdrop-blur-sm p-3 hover:border-neon/60 transition",
                   },
                   [
-                    // BOTÓN "Ver proyectos" con link
                     e(
-                      "a",
+                      "p",
                       {
-                        key: "link-projects",
-                        href: "https://jcduro.bexartideas.com/templates/jcduro.php#projects",
-                        target: "_blank",
-                        rel: "noopener noreferrer",
+                        key: "label1",
+                        className:
+                          "text-[10px] uppercase tracking-wide text-slate-500",
                       },
-                      e(
-                        "button",
-                        {
-                          className:
-                            "px-6 py-3 rounded-full bg-neon text-darkbg font-semibold shadow-[0_0_25px_#04D9FF] hover:shadow-[0_0_40px_#04D9FF] hover:-translate-y-0.5 transition",
-                        },
-                        "Ver proyectos"
-                      )
+                      "Proyectos"
                     ),
-                    // BOTÓN "Contacto" con link
                     e(
-                      "a",
+                      "p",
                       {
-                        key: "link-contact",
-                        href: "https://jcduro.bexartideas.com/templates/jcduro.php#contact",
-                        target: "_blank",
-                        rel: "noopener noreferrer",
+                        key: "value1",
+                        className:
+                          "text-lg font-semibold text-neon",
                       },
-                      e(
-                        "button",
-                        {
-                          className:
-                            "px-6 py-3 rounded-full border border-neon text-neon hover:bg-neon/10 transition",
-                        },
-                        "Contacto"
-                      )
+                      "20+"
                     ),
                   ]
                 ),
                 e(
                   "div",
                   {
-                    key: "stats",
+                    key: "stat2",
                     className:
-                      "mt-8 grid grid-cols-3 gap-4 text-xs md:text-sm text-slate-400",
+                      "border border-slate-800/80 rounded-xl bg-slate-900/30 backdrop-blur-sm p-3 hover:border-neon/60 transition",
                   },
                   [
                     e(
-                      "div",
+                      "p",
                       {
-                        key: "stat1",
+                        key: "label2",
                         className:
-                          "border border-slate-800/80 rounded-xl bg-slate-900/30 backdrop-blur-sm p-3 hover:border-neon/60 transition",
+                          "text-[10px] uppercase tracking-wide text-slate-500",
                       },
-                      [
-                        e(
-                          "p",
-                          {
-                            key: "label1",
-                            className:
-                              "text-[10px] uppercase tracking-wide text-slate-500",
-                          },
-                          "Proyectos"
-                        ),
-                        e(
-                          "p",
-                          {
-                            key: "value1",
-                            className:
-                              "text-lg font-semibold text-neon",
-                          },
-                          "12+"
-                        ),
-                      ]
+                      "Experiencia"
                     ),
                     e(
-                      "div",
+                      "p",
                       {
-                        key: "stat2",
+                        key: "value2",
                         className:
-                          "border border-slate-800/80 rounded-xl bg-slate-900/30 backdrop-blur-sm p-3 hover:border-neon/60 transition",
+                          "text-lg font-semibold text-neon",
                       },
-                      [
-                        e(
-                          "p",
-                          {
-                            key: "label2",
-                            className:
-                              "text-[10px] uppercase tracking-wide text-slate-500",
-                          },
-                          "Experiencia"
-                        ),
-                        e(
-                          "p",
-                          {
-                            key: "value2",
-                            className:
-                              "text-lg font-semibold text-neon",
-                          },
-                          "3 años"
-                        ),
-                      ]
+                      "10 años"
+                    ),
+                  ]
+                ),
+                e(
+                  "div",
+                  {
+                    key: "stat3",
+                    className:
+                      "border border-slate-800/80 rounded-xl bg-slate-900/30 backdrop-blur-sm p-3 hover:border-neon/60 transition",
+                  },
+                  [
+                    e(
+                      "p",
+                      {
+                        key: "label3",
+                        className:
+                          "text-[10px] uppercase tracking-wide text-slate-500",
+                      },
+                      "Stack"
                     ),
                     e(
-                      "div",
+                      "p",
                       {
-                        key: "stat3",
+                        key: "value3",
                         className:
-                          "border border-slate-800/80 rounded-xl bg-slate-900/30 backdrop-blur-sm p-3 hover:border-neon/60 transition",
+                          "text-lg font-semibold text-neon",
                       },
-                      [
-                        e(
-                          "p",
-                          {
-                            key: "label3",
-                            className:
-                              "text-[10px] uppercase tracking-wide text-slate-500",
-                          },
-                          "Stack",
-                        ),
-                        e(
-                          "p",
-                          {
-                            key: "value3",
-                            className:
-                              "text-lg font-semibold text-neon",
-                          },
-                          "React · Tailwind"
-                        ),
-                      ]
+                      "React · Tailwind"
                     ),
                   ]
                 ),
               ]
             ),
           ]
-        );
-      }
+        ),
+      ]
+    );
+  }
 
-      function App() {
-        return e(
-          "div",
-          {
-            className:
-              "min-h-screen bg-darkbg text-slate-100 flex items-center justify-center relative overflow-hidden",
-          },
-          [e(Hero, { key: "hero" })]
-        );
-      }
+  function App() {
+    return e(
+      "div",
+      {
+        className:
+          "min-h-screen bg-darkbg text-slate-100 flex items-center justify-center relative overflow-hidden",
+      },
+      [e(Hero, { key: "hero" })]
+    );
+  }
 
-      const root = ReactDOM.createRoot(
-        document.getElementById("root")
-      );
-      root.render(e(App));
-    </script>
+  const root = ReactDOM.createRoot(document.getElementById("root"));
+  root.render(e(App));
+</script>
+
   </body>
 </html>
