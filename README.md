@@ -11,7 +11,7 @@ Incluye logo, CTA hacia portfolio principal y un pequeño bloque de estadística
 
 --- 
 
-✨ Pruebalo Online
+# ✨ Pruebalo Online
 
 [Landing_Neon](https://jcduro.bexartideas.com/proyectos/dashjc/landing_mini/landing.php)
 
