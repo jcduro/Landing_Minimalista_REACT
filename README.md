@@ -45,6 +45,13 @@ Incluye logo, CTA hacia portfolio principal y un pequeño bloque de estadística
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
 
 
+---
+
+📊 Lenguajes y Herramientas
+
+[![My Skills](https://skillicons.dev/icons?i=html,css,react,github,vscode,windows,&theme=light&perline=8)](https://skillicons.dev)
+
+---
 
 ## 📦 Personalización rápida
 
