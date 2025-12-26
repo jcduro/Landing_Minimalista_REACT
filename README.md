@@ -1,14 +1,26 @@
-# Neon Landing · JC Duro
+# ✨ Neon Landing · JC Duro
 
 Landing page minimalista construida con React, con fondo oscuro y acentos neon azul.
 Incluye logo, CTA hacia portfolio principal y un pequeño bloque de estadísticas.
 
-## Demo
+---
+
+🖼️ Vista previa
+
+![Landing_Neon](previewland.gif)
+
+--- 
+
+✨ Pruebalo Online
+
+[Landing_Neon](https://jcduro.bexartideas.com/proyectos/dashjc/landing_mini/landing.php)
 
 - Producción: https://jcduro.bexartideas.com/templates/NEON_LANDING (ejemplo)
 - Portfolio principal: https://jcduro.bexartideas.com/templates/jcduro.php#projects
 
-## Características
+--- 
+
+## 🚀 Características
 
 - UI tipo tarjeta, centrada, con fondo oscuro y glow neon azul.
 - Logo de JC Duro sobre el texto "Frontend · React".
@@ -24,19 +36,17 @@ Incluye logo, CTA hacia portfolio principal y un pequeño bloque de estadística
 - CSS plano con clases utilitarias propias (sin Tailwind en runtime).
 - Integrable en proyectos PHP/Bootstrap como widget visual.
 
-## Estructura del repositorio
+## 📁 Estructura del repositorio
 
 - `index.html` / `landing.php`: Página principal con el contenedor `react-app-neon`.
-- `assets/css/landing-neon.css`: Estilos neon (fondo, botones, stats, etc.).
-- `assets/js/neon-landing.js`: Definición de componentes `App` y `Hero` y montaje con `ReactDOM.createRoot`.
 
 
 <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-<script src="/proyectos/dashjc/assets/js/neon-landing.js"></script>
 
 
-## Personalización rápida
+
+## 📦 Personalización rápida
 
 ```md
 ## Personalización
